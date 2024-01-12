@@ -1,25 +1,11 @@
-<meta charset="utf8" />
-<html>
-  <script src='./sql-wasm.js'></script>
-  <script>
-    config = {
-      locateFile: filename => "./words.db"
-    }
-    // The `initSqlJs` function is globally provided by all of the main dist files if loaded in the browser.
-    // We must specify this locateFile function if we are loading a wasm file from anywhere other than the current html page's folder.
-    initSqlJs(config).then(function(SQL){
-      //Create the database
-      const db = new SQL.Database();
-
-      db.all(sql,[],(err,rows)=>{
-        if (err) return console.error("ERROR: Pineapple!!");
-        rows.forEach(row => {
-            console.log(row)
-        });
-    });
-    });
-  </script>
-  <body>
-    Output is in Javascript console
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
 </html>
