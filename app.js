@@ -21,7 +21,6 @@ app.get('/', async (req, res) => {
             letters.push(rows[i]["word"])
         }
         res.send(letters);
-        console.log(letters)
     });
 
 })
