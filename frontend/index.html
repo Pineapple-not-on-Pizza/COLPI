@@ -1,0 +1,116 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>COLPI</title>
+</head>
+
+<body>
+    <header>
+        <h1><a href="">COLPI</a></h1>
+        <button onclick="visibilityToggle('tableSize')">Change table size</button>
+    </header>
+
+    <table>
+        <tbody id="tableBody"></tbody>
+    </table>
+
+    <div id="tableSize">
+        <label>Input characters for table:</label>
+        <input id="letters" type="text" value="ABCDEFGHIJKLMNOPQRSTUVWXYZ">
+        <button onclick="makeTable()">Confirm</button>
+    </div>
+
+    <div id="words">
+        <h2 id="letterPair">Images for:</h2>
+        <ul id="list">
+            
+        </ul>
+        <button onclick="visibilityToggle('words')">Close</button>
+    </div>
+
+    <footer>
+        <div id="github">
+            <p>Check out our GitHub <a href="https://github.com/Pineapple-not-on-Pizza/COLPI">here</a></p>
+        </div>
+        <div id="contact">
+            <p>Contact us on Discord:</p>
+            <p>@pineapple0000</p>
+            <p>@yeetpizza74</p>
+        </div>
+    </footer>
+
+    <script>
+
+        function makeTable() {
+            var size = document.getElementById('letters').value;
+            var tableBody = document.getElementById("tableBody");
+
+            while (tableBody.rows.length > 0) {
+                tableBody.deleteRow(0);
+            }
+
+            var headerRow = document.createElement("tr");
+
+            var headerCell = document.createElement("th");
+            headerCell.textContent = String("");
+            headerRow.appendChild(headerCell);
+
+            for (let i = 0; i < size.length; i++) {
+                var headerCell = document.createElement("th");
+                headerCell.textContent = String(size[i]).toUpperCase();
+                headerRow.appendChild(headerCell);
+            }
+
+            tableBody.appendChild(headerRow);
+
+            for (let i = 0; i < size.length; i++) {
+                var row = document.createElement("tr");
+
+                var identifierCell = document.createElement("th");
+                identifierCell.textContent = String(size[i]).toUpperCase();
+                row.appendChild(identifierCell);
+
+                for (let j = 0; j < size.length; j++) {
+                    var cell = document.createElement("td");
+                    cell.textContent = String(size[i]).toUpperCase() + String(size[j]).toUpperCase();
+                    cell.onclick = function () { showWords(String(size[i]).toUpperCase() + String(size[j]).toUpperCase()) };
+                    row.appendChild(cell);
+                }
+
+                tableBody.appendChild(row);
+            }
+
+            document.getElementById('tableSize').style.display = 'none';
+
+        }
+
+        function showWords(letters) {
+            document.getElementById('list').innerHTML = "";
+            document.getElementById('words').style.display = 'flex';
+            document.getElementById('letterPair').textContent = "Images for: " + letters;
+
+            
+        }
+
+        function visibilityToggle(id) {
+            if (document.getElementById(id).style.display == 'flex') {
+                document.getElementById(id).style.display = 'none';
+            } else {
+                document.getElementById(id).style.display = 'flex';
+            }
+
+            if (id = words) {
+                document.getElementById('list').innerHTML = "";
+            }
+        }
+
+        makeTable()
+
+    </script>
+
+</body>
+
+</html>

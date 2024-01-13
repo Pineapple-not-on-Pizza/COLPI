@@ -1,0 +1,231 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: rgb(35, 35, 46);
+}
+
+header {
+    background-color: rgb(35, 35, 46);
+    display: flex;
+    align-items: center;
+}
+
+header button {
+    color: rgb(35, 35, 46);
+    margin-left: 25px;
+    padding: 10px;
+    height: 50px;
+    width: auto;
+    background-color: rgb(226, 226, 226);
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+header button:hover {
+    background-color: rgb(206, 206, 206);
+}
+
+header button:active {
+    background-color: rgb(173, 173, 173);
+}
+
+header h1 {
+    font-size: 70px;
+    padding: 10px;
+}
+
+header h1 a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: rgb(226, 226, 226);
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    height: auto;
+}
+
+table tr {
+    background-color: rgb(213, 232, 255);
+}
+
+table tr:nth-child(odd) {
+    background-color: rgb(131, 189, 255);
+}
+
+table tr th,
+table tr td {
+    border: 1px solid black;
+    text-align: center;
+}
+
+table tr th {
+    background-color: rgb(60, 133, 218);
+}
+
+table tr td:hover {
+    box-shadow: inset 0px 0px 0px 1px;
+    background-color: rgb(83, 137, 199);
+}
+
+table tr td:focus {
+    color: red;
+}
+
+#tableSize {
+    display: none;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 400px;
+    height: 200px;
+    background-color: rgb(35, 35, 46);
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 5px;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#tableSize * {
+    margin: 10px;
+}
+
+#tableSize label {
+    color: rgb(226, 226, 226);
+}
+
+#tableSize input {
+    color: rgb(35, 35, 46);
+    background-color: rgb(226, 226, 226);
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    height: 25px;
+    width: 270px;
+    padding: 5px;
+    text-transform: uppercase;
+}
+
+#tableSize button {
+    height: 50px;
+    width: 275px;
+    color: rgb(35, 35, 46);
+    background-color: rgb(226, 226, 226);
+    border: none;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#tableSize button:hover {
+    background-color: rgb(206, 206, 206);
+}
+
+#tableSize button:active {
+    background-color: rgb(173, 173, 173);
+}
+
+#words {
+    display: none;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 400px;
+    height: 500px;
+    background-color: rgb(35, 35, 46);
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 5px;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#words * {
+    margin: 10px;
+}
+
+#words button {
+    position: absolute;
+    height: 50px;
+    width: 275px;
+    color: rgb(35, 35, 46);
+    background-color: rgb(226, 226, 226);
+    border: none;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    bottom: 25px;
+}
+
+#words button:hover {
+    background-color: rgb(206, 206, 206);
+}
+
+#words button:active {
+    background-color: rgb(173, 173, 173);
+}
+
+#words h2 {
+    display: flex;
+    position: absolute;
+    top: 25px;
+    color: rgb(226, 226, 226);
+}
+
+#words ul {
+    position: absolute;
+    top: 60px;
+    color: rgb(226, 226, 226);
+    list-style-type: none;
+    font-weight: bold;
+}
+
+footer {
+    display: flex;
+    background-color: rgb(35, 35, 46);
+    height: 120px;
+}
+
+footer #github {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: max-content;
+    margin-left: 30px;
+    margin-right: 15px;
+}
+
+footer #contact {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    height: 100%;
+    width: max-content;
+    margin-left: 30px;
+    margin-right: 15px;
+}
+
+footer p,
+footer a {
+    color: rgb(226, 226, 226);
+}
