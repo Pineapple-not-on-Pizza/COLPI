@@ -92,7 +92,15 @@
             document.getElementById('words').style.display = 'flex';
             document.getElementById('letterPair').textContent = "Images for: " + letters;
 
-            
+            url = "http://127.0.0.1:5000/?pair="
+
+            const Http = new XMLHttpRequest();
+            Http.open("GET", url);
+            Http.send();
+
+            Http.onreadystatechange = (e) => {
+            console.log(Http.responseText)
+            }
         }
 
         function visibilityToggle(id) {
