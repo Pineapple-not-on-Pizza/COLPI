@@ -9,6 +9,11 @@ const app = express()
 let letters;
 let sql;
 
+const options = {
+  key: fs.readFileSync("./server.key"),
+  cert: fs.readFileSync("./server.cert")
+};
+
 const db = new sqlite3.Database("./words.db", sqlite3.OPEN, (err)=>{
     if (err) return console.error(err);
 })
@@ -24,11 +29,8 @@ app.get('/', async (req, res) => {
         }
         res.send(letters);
     });
-
+    
 })
 
-https
-.createServer(app)
-.listen(port, ()=>{
-console.log('server is runing at port 5000')
-});
+app.listen(port);
+https.createServer(options, app).listen(port);
