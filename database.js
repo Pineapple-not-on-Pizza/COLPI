@@ -8,7 +8,7 @@ const db = new sqlite3.Database("./words.db", sqlite3.OPEN, (err)=>{
 // sql = "CREATE TABLE word(id INTEGER PRIMARY KEY,word,letters)";
 // db.run(sql);
 
-sql = "SELECT * FROM word WHERE letters = 'PI'";
+sql = "SELECT * FROM word WHERE word = 'PINEAPPLE'";
 db.all(sql,[],(err,rows)=>{
     if (err) return console.error("ERROR: Pineapple!!");
     rows.forEach(row => {
