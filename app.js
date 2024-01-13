@@ -1,5 +1,7 @@
 const express = require('express')
 const sqlite3 = require('sqlite3');
+const https = require("https");
+const fs = require("fs");
 
 const port = 5000
 const app = express()
@@ -25,6 +27,8 @@ app.get('/', async (req, res) => {
 
 })
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
+https
+.createServer(app)
+.listen(port, ()=>{
+console.log('server is runing at port 5000')
+});
