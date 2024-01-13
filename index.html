@@ -92,7 +92,7 @@
             document.getElementById('words').style.display = 'flex';
             document.getElementById('letterPair').textContent = "Images for: " + letters;
 
-            url = "http://127.0.0.1:5000/?pair="
+            url = "http://colpi.pineapple-not-on-pizza.tech/?pair="+letters
 
             const Http = new XMLHttpRequest();
             Http.open("GET", url);
