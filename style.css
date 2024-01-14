@@ -5,22 +5,22 @@
 }
 
 body {
-    background-color: rgb(35, 35, 46);
+    background-color: rgb(14, 28, 68);
 }
 
 header {
-    background-color: rgb(35, 35, 46);
+    background-color: rgb(14, 28, 68);
     display: flex;
     align-items: center;
 }
 
 header button {
-    color: rgb(35, 35, 46);
+    color: rgb(14, 28, 68);
     margin-left: 25px;
     padding: 10px;
     height: 50px;
     width: auto;
-    background-color: rgb(226, 226, 226);
+    background-color: rgb(238, 227, 240);
     border: none;
     border-radius: 10px;
     font-size: 20px;
@@ -28,11 +28,13 @@ header button {
 }
 
 header button:hover {
-    background-color: rgb(206, 206, 206);
+    background-color: rgb(228, 218, 230);
+    transform: scale(101%);
+    box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.3);
 }
 
 header button:active {
-    background-color: rgb(173, 173, 173);
+    background-color: rgb(212, 208, 212);
 }
 
 header h1 {
@@ -43,7 +45,8 @@ header h1 {
 header h1 a {
     margin-left: 25px;
     text-decoration: none;
-    color: rgb(226, 226, 226);
+    color: rgb(238, 227, 240);
+    -webkit-user-select: none;
 }
 
 table {
@@ -54,11 +57,11 @@ table {
 }
 
 table tr {
-    background-color: rgb(213, 232, 255);
+    background-color: rgb(190, 212, 238);
 }
 
 table tr:nth-child(odd) {
-    background-color: rgb(131, 189, 255);
+    background-color: rgb(146, 186, 233);
 }
 
 table tr:hover {
@@ -72,17 +75,17 @@ table tr td {
 }
 
 table tr th {
-    background-color: rgb(60, 133, 218);
+    background-color: rgb(243, 153, 213);
 }
 
 table tr td:hover {
     box-shadow: inset 0px 0px 0px 0.5px;
-    background-color: rgb(83, 137, 199);
+    background-color: rgb(94, 163, 241);
     cursor: pointer;
 }
 
 table tr td:active {
-    background-color: rgb(62, 101, 146);
+    background-color: rgb(94, 150, 214);
 }
 
 table tr td:focus {
@@ -155,11 +158,11 @@ table tr td:focus {
     left: 0;
     bottom: 0;
     right: 0;
-    width: 25%;
+    width: 50%;
     height: 70%;
-    background-color: rgb(35, 35, 46);
+    background-color: rgb(14, 28, 68);
     border-radius: 10px;
-    box-shadow: 0px 0px 20px 5px;
+    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.5);
 
     flex-direction: column;
     align-items: center;
@@ -174,13 +177,14 @@ table tr td:focus {
     position: absolute;
     height: 10%;
     width: 50%;
-    color: rgb(35, 35, 46);
-    background-color: rgb(226, 226, 226);
+    color: rgb(14, 28, 68);
+    background-color: rgb(238, 227, 240);
     border: none;
     border-radius: 20px;
     font-size: 20px;
     font-weight: bold;
     bottom: 25px;
+    -webkit-user-select: none;
 }
 
 #words button:hover {
@@ -195,13 +199,13 @@ table tr td:focus {
     display: flex;
     position: absolute;
     top: 25px;
-    color: rgb(226, 226, 226);
+    color: rgb(238, 227, 240);
 }
 
 #words ul {
     position: absolute;
     top: 12.5%;
-    color: rgb(226, 226, 226);
+    color: rgb(238, 227, 240);
     list-style-type: none;
     font-weight: bold;
     height: 65%;
@@ -211,7 +215,7 @@ table tr td:focus {
 
 footer {
     display: flex;
-    background-color: rgb(35, 35, 46);
+    background-color: rgb(14, 28, 68);
     height: auto;
     margin-top: 15px;
 }
@@ -241,23 +245,24 @@ footer #contact {
 
 footer p,
 footer a {
-    color: rgb(226, 226, 226);
+    color: rgb(238, 227, 240);
 }
 
 ::-webkit-scrollbar {
     border-radius: 5px;
-    background: rgb(226, 226, 226);
+    background: rgb(4, 14, 68);
 }
 
 ::-webkit-scrollbar-thumb {
     border-radius: 4px;
-    background: rgb(22, 22, 29);
-    width: 90%;
+    background: rgb(238, 227, 240);
+    width: auto;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 960px) {
 
     #wordsContainer {
+        z-index: 1;
         pointer-events: none;
         position: fixed;
         top: 0px;
@@ -317,7 +322,6 @@ footer a {
 
     ::-webkit-scrollbar-thumb {
         border-radius: 4px;
-        background: rgb(22, 22, 29);
         width: 20%;
     }
 
