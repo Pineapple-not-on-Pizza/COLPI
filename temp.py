@@ -19,6 +19,6 @@ for i, row in enumerate(csvreader):
 
 print(db)
 
-save_file = open("test.json", "w")
+save_file = open("words.json", "w")
 json.dump(db, save_file, indent = 6)  
 save_file.close()
