@@ -155,7 +155,7 @@ table tr td:focus {
     left: 0;
     bottom: 0;
     right: 0;
-    width: 400px;
+    width: 25%;
     height: 70%;
     background-color: rgb(35, 35, 46);
     border-radius: 10px;
