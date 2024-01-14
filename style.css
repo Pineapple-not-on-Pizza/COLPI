@@ -311,6 +311,10 @@ footer a {
         overflow-x: auto;
     }
 
+    table tr td, table tr th {
+        padding: 2px;
+    }
+
     ::-webkit-scrollbar-thumb {
         border-radius: 4px;
         background: rgb(22, 22, 29);
