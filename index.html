@@ -92,15 +92,15 @@
             document.getElementById('words').style.display = 'flex';
             document.getElementById('letterPair').textContent = "Images for: " + letters;
 
-            url = "http://86.8.226.247:5000/?pair="+letters
-
-            const Http = new XMLHttpRequest();
-            Http.open("GET", url);
-            Http.send();
-
-            Http.onreadystatechange = (e) => {
-            console.log(Http.responseText)
-            }
+            fetch('./words.json')
+                .then(response => response.json())
+                .then(data => {
+                    wordList = ""
+                    for (i in data[letters]){
+                        wordList += "<li>" + data[letters][i] + "li"
+                    }
+                    document.getElementById('list').innerHTML = wordList
+                })
         }
 
         function visibilityToggle(id) {
