@@ -171,8 +171,8 @@ table tr td:focus {
 
 #words button {
     position: absolute;
-    height: 50px;
-    width: 275px;
+    height: 10%;
+    width: 50%;
     color: rgb(35, 35, 46);
     background-color: rgb(226, 226, 226);
     border: none;
@@ -199,12 +199,12 @@ table tr td:focus {
 
 #words ul {
     position: absolute;
-    top: 75px;
+    top: 12.5%;
     color: rgb(226, 226, 226);
     list-style-type: none;
     font-weight: bold;
-    height: 475px;
-    width: 300px;
+    height: 65%;
+    width: 80%;
     overflow: auto;
 }
 
@@ -256,18 +256,51 @@ footer a {
 
 @media (max-width: 1000px) {
 
+    #wordsContainer {
+        pointer-events: none;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
     #words {
-        width: 80%;
+        pointer-events: all;
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        margin: 0px;
+        z-index: 1;
+        width: 90%;
+        height: 50%;
     }
 
     #words ul {
         position: absolute;
         top: 75px;
         height: 57.5%;
-        width: 200px;
+        width: 80%;
     }
 
     footer #contact {
+        margin-left: 0px;
+    }
+
+    header {
+        margin-left: 0px;
+        place-content: center;
+    }
+
+    header h1 {
+        padding: 0px;
+    }
+    
+    header h1 a {
         margin-left: 0px;
     }
 
