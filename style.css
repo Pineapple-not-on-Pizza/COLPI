@@ -60,6 +60,10 @@ table tr:nth-child(odd) {
     background-color: rgb(131, 189, 255);
 }
 
+table tr:hover {
+    cursor: default;
+}
+
 table tr th,
 table tr td {
     border: 1px solid black;
@@ -71,8 +75,13 @@ table tr th {
 }
 
 table tr td:hover {
-    box-shadow: inset 0px 0px 0px 1px;
+    box-shadow: inset 0px 0px 0px 0.5px;
     background-color: rgb(83, 137, 199);
+    cursor: pointer;
+}
+
+table tr td:active {
+    background-color: rgb(62, 101, 146);
 }
 
 table tr td:focus {
@@ -190,16 +199,20 @@ table tr td:focus {
 
 #words ul {
     position: absolute;
-    top: 60px;
+    top: 75px;
     color: rgb(226, 226, 226);
     list-style-type: none;
     font-weight: bold;
+    height: 475px;
+    width: 300px;
+    overflow: auto;
 }
 
 footer {
     display: flex;
     background-color: rgb(35, 35, 46);
-    height: 120px;
+    height: auto;
+    margin-top: 15px;
 }
 
 footer #github {
@@ -228,4 +241,34 @@ footer #contact {
 footer p,
 footer a {
     color: rgb(226, 226, 226);
+}
+
+::-webkit-scrollbar {
+    border-radius: 5px;
+    background: rgb(226, 226, 226);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background: rgb(22, 22, 29);
+    width: 90%;
+}
+
+@media (max-width: 1000px) {
+
+    #words {
+        width: 80%;
+    }
+
+    #words ul {
+        position: absolute;
+        top: 75px;
+        height: 57.5%;
+        width: 200px;
+    }
+
+    footer #contact {
+        margin-left: 0px;
+    }
+
 }
