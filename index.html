@@ -97,7 +97,7 @@
                 .then(data => {
                     wordList = ""
                     for (i in data[letters]){
-                        wordList += "<li>" + data[letters][i] + "li"
+                        wordList += "<li>" + data[letters][i] + "</li>"
                     }
                     document.getElementById('list').innerHTML = wordList
                 })
