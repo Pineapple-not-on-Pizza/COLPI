@@ -277,12 +277,12 @@ footer a {
         margin: 0px;
         z-index: 1;
         width: 90%;
-        height: 80%;
+        height: 70%;
     }
 
     #words ul {
         position: absolute;
-        top: 75px;
+        top: 15%;
         height: 57.5%;
         width: 80%;
     }
