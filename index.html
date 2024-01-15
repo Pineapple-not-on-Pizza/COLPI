@@ -8,14 +8,14 @@
     <title>COLPI</title>
 </head>
 
-<!-- Google tag (gtag.js) -->
+<!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-EQLJL4B6RB"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-EQLJL4B6RB');
+    gtag('config', 'G-EQLJL4B6RB');
 </script>
 
 <body>
@@ -40,7 +40,7 @@
         <div id="words">
             <h2 id="letterPair">Images for:</h2>
             <ul id="list">
-                
+
             </ul>
             <button onclick="visibilityToggle('words')">Close</button>
         </div>
@@ -111,7 +111,7 @@
                 .then(response => response.json())
                 .then(data => {
                     wordList = ""
-                    for (i in data[letters]){
+                    for (i in data[letters]) {
                         wordList += "<li>" + data[letters][i] + "</li>"
                     }
                     document.getElementById('list').innerHTML = wordList
