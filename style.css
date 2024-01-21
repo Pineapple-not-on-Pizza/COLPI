@@ -220,6 +220,7 @@ table tr td:focus {
     height: 65%;
     width: 80%;
     overflow: auto;
+    letter-spacing: 1px;
 }
 
 footer {
