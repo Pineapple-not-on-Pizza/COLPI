@@ -4,6 +4,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
+#closeButton {
+    cursor: pointer;
+}
+
 body {
     background-color: rgb(14, 28, 68);
 }
